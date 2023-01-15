@@ -5,6 +5,7 @@ function App() {
 
   const handleClick = () => {
     setShowParagraph(true);
+    setShowParagraph(!showParagraph);
   }
 
   return (
