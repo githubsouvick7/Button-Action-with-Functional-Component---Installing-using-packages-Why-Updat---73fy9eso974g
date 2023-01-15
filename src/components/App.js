@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from "react";
+import "./../styles/App.css";
 
-function MyButton() {
-  const [showParagraph, setShowParagraph] = useState(false);
-
-  return (
-    <>
-      <button id="click" onClick={() => setShowParagraph(!showParagraph)}>
-        Click me
-      </button>
-      {showParagraph && (
-        <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
-      )}
-    </>
-  );
+  function App(){
+    const [cls,setCls] = useState('d-none');
+ 
+    const text = "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
+    return (
+      <div id="main">
+        <button id="click" onClick={() => setCls((cls) => cls ==='d-none' ? 'show' : 'd-none')}>Click Here</button>
+        <h4 id="para" className={cls}>{text}</h4>
+      </div>
+    );
 }
 
-export default MyButton;
+
+export default App;
