@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <button id="click" onClick={handleClick}>Click me</button>
-      {showParagraph && <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
+      {showParagraph && <h4 id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</h4>}
     </div>
   );
 }
