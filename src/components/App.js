@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 
-function App() {
+function MyButton() {
   const [showParagraph, setShowParagraph] = useState(false);
 
-  const handleClick = () => {
-    setShowParagraph(true);
-    setShowParagraph(!showParagraph);
-  }
-
   return (
-    <div>
-      <button id="click" onClick={handleClick}>Click me</button>
-      {showParagraph && <h4 id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</h4>}
-    </div>
+    <>
+      <button id="click" onClick={() => setShowParagraph(!showParagraph)}>
+        Click me
+      </button>
+      {showParagraph && (
+        <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
+      )}
+    </>
   );
 }
 
-export default App;
+export default MyButton;
